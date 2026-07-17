@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --color-primary: #3aa76d;
+  /* Neutral */
+  --bg-page: #f5f6f8;
+  --bg-surface: #ffffff;
+  --bg-surface-alt: #f9fafb;
+  --bg-viewport: #edeef0;
+  --border-default: #e5e7eb;
+  --border-strong: #d1d5db;
+
+  /* Text */
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --text-tertiary: #9ca3af;
+  --text-disabled: #d1d5db;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* Accent */
+  --accent-primary: #16a34a;
+  --accent-primary-hover: #15803d;
+  --accent-primary-subtle: #dcfce7;
+
+  /* Priority */
+  --priority-high: #dc2626;
+  --priority-medium: #f59e0b;
+  --priority-low: #16a34a;
+
+  /* Status */
+  --status-overdue: #ea580c;
+  --status-overdue-bg: #fff7ed;
+  --status-done: #16a34a;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 20px;
+  --space-2xl: 24px;
+  --space-3xl: 32px;
+
+  /* Radius */
+  --radius-card: 16px;
+  --radius-chip: 999px;
+  --radius-input: 12px;
+  --radius-checkbox: 6px;
+
+  /* Shadow / Elevation */
+  --shadow-none: none;
+  --shadow-xs: 0 1px 2px rgba(17, 24, 39, 0.04);
+  --shadow-sm: 0 2px 8px rgba(17, 24, 39, 0.06);
+  --shadow-md: 0 8px 24px rgba(17, 24, 39, 0.1);
+  --shadow-lg: 0 16px 40px rgba(17, 24, 39, 0.14);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-size: 14px;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
