@@ -3,7 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To-Do List App</title>
+    <title>RiserTask - Modern Minimalist To-Do List App</title>
+    <meta
+      name="description"
+      content="Manage your daily tasks efficiently with RiserTask, a modern, minimalist, and responsive to-do list app designed with a Mobile-First approach."
+    />
+    <meta
+      name="keywords"
+      content="todo app, task manager, minimalist todo list, web application"
+    />
+    <meta name="author" content="Zidniy" />
+    <link rel="icon" type="image/svg+xml" href="assets/brands/brand-logo.png" />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -23,7 +33,7 @@
             </div>
           </div>
           <time class="greeting__date" datetime="2026-07-19">
-            <span class="greeting__date-day">Sunday</span>
+            <span class="greeting__date-day">Day</span>
             <span class="greeting__date-full">19 July 2026</span>
           </time>
         </header>
@@ -38,7 +48,6 @@
           <div class="task-form__actions">
             <div class="task-form__options">
               <div class="task-form__priority">
-                <!-- Visual custom trigger styled as before -->
                 <div class="task-form__priority-trigger" aria-hidden="true">
                   <span
                     class="task-form__priority-dot task-form__priority-dot--low"
@@ -57,7 +66,6 @@
                     <path d="m6 9 6 6 6-6" />
                   </svg>
                 </div>
-                <!-- Actual accessible select element overlaying the custom trigger -->
                 <select
                   class="task-form__priority-select"
                   name="task-priority"
@@ -76,17 +84,19 @@
                   name="task-date"
                   id="task-date"
                   aria-label="Task Due Date"
-                  required
                 />
               </div>
             </div>
-            <button type="submit" class="task-form__submit">+ Add Task</button>
+            <button type="submit" class="task-form__submit">+ Add</button>
           </div>
         </form>
         <nav class="task-nav">
           <ul class="task-nav__list">
             <li class="task-nav__item">
-              <button class="task-nav__link task-nav__link--active" aria-pressed="true">
+              <button
+                class="task-nav__link task-nav__link--active"
+                aria-pressed="true"
+              >
                 To Do
                 <span class="task-nav__count task-nav__count--active">2</span>
               </button>
@@ -109,129 +119,12 @@
 
       <main class="task-list">
         <header class="task-list__header">
-          <h3 class="task-list__header-title">Task List</h3>
+          <h2 class="task-list__header-title">Task List</h2>
           <button type="button" class="task-list__header-delete">
             Delete All
           </button>
         </header>
-        <ul class="task-list__items">
-          <li class="task-item">
-            <input type="checkbox" class="task-item__checkbox" id="task-1" />
-            <div class="task-item__details">
-              <label class="task-item__label" for="task-1">
-                <span
-                  class="task-item__priority-dot task-item__priority-dot--low"
-                ></span
-                >Task</label
-              >
-              <time class="task-item__date" datetime="2026-07-19"
-                >dd-mm-yyyy</time
-              >
-            </div>
-
-            <button
-              type="button"
-              class="task-item__delete"
-              aria-label="Delete task"
-            >
-              <svg
-                class="task-item__delete-icon"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M16 6V5.2C16 4.0799 16 3.51984 15.782 3.09202C15.5903 2.71569 15.2843 2.40973 14.908 2.21799C14.4802 2 13.9201 2 12.8 2H11.2C10.0799 2 9.51984 2 9.09202 2.21799C8.71569 2.40973 8.40973 2.71569 8.21799 3.09202C8 3.51984 8 4.0799 8 5.2V6M10 11.5V16.5M14 11.5V16.5M3 6H21M19 6V17.2C19 18.8802 19 19.7202 18.673 20.362C18.3854 20.9265 17.9265 21.3854 17.362 21.673C16.7202 22 15.8802 22 14.2 22H9.8C8.11984 22 7.27976 22 6.63803 21.673C6.07354 21.3854 5.6146 20.9265 5.32698 20.362C5 19.7202 5 18.8802 5 17.2V6"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-          </li>
-          <li class="task-item task-item--done">
-            <input
-              type="checkbox"
-              class="task-item__checkbox"
-              id="task-2"
-              checked
-            />
-            <div class="task-item__details">
-              <label class="task-item__label" for="task-2">
-                <span
-                  class="task-item__priority-dot task-item__priority-dot--low task-item__priority-dot--done"
-                ></span
-                >Task</label
-              >
-              <time class="task-item__date" datetime="2026-07-19"
-                >dd-mm-yyyy</time
-              >
-            </div>
-
-            <button
-              type="button"
-              class="task-item__delete"
-              aria-label="Delete task"
-            >
-              <svg
-                class="task-item__delete-icon"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M16 6V5.2C16 4.0799 16 3.51984 15.782 3.09202C15.5903 2.71569 15.2843 2.40973 14.908 2.21799C14.4802 2 13.9201 2 12.8 2H11.2C10.0799 2 9.51984 2 9.09202 2.21799C8.71569 2.40973 8.40973 2.71569 8.21799 3.09202C8 3.51984 8 4.0799 8 5.2V6M10 11.5V16.5M14 11.5V16.5M3 6H21M19 6V17.2C19 18.8802 19 19.7202 18.673 20.362C18.3854 20.9265 17.9265 21.3854 17.362 21.673C16.7202 22 15.8802 22 14.2 22H9.8C8.11984 22 7.27976 22 6.63803 21.673C6.07354 21.3854 5.6146 20.9265 5.32698 20.362C5 19.7202 5 18.8802 5 17.2V6"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-          </li>
-          <li class="task-item task-item--overdue">
-            <input type="checkbox" class="task-item__checkbox" id="task-3" />
-            <div class="task-item__details">
-              <label class="task-item__label" for="task-3">
-                <span
-                  class="task-item__priority-dot task-item__priority-dot--low"
-                ></span
-                >Task</label
-              >
-              <time class="task-item__date" datetime="2026-07-19"
-                >dd-mm-yyyy</time
-              >
-            </div>
-
-            <button
-              type="button"
-              class="task-item__delete"
-              aria-label="Delete task"
-            >
-              <svg
-                class="task-item__delete-icon"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M16 6V5.2C16 4.0799 16 3.51984 15.782 3.09202C15.5903 2.71569 15.2843 2.40973 14.908 2.21799C14.4802 2 13.9201 2 12.8 2H11.2C10.0799 2 9.51984 2 9.09202 2.21799C8.71569 2.40973 8.40973 2.71569 8.21799 3.09202C8 3.51984 8 4.0799 8 5.2V6M10 11.5V16.5M14 11.5V16.5M3 6H21M19 6V17.2C19 18.8802 19 19.7202 18.673 20.362C18.3854 20.9265 17.9265 21.3854 17.362 21.673C16.7202 22 15.8802 22 14.2 22H9.8C8.11984 22 7.27976 22 6.63803 21.673C6.07354 21.3854 5.6146 20.9265 5.32698 20.362C5 19.7202 5 18.8802 5 17.2V6"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-          </li>
-        </ul>
+        <ul class="task-list__items"></ul>
       </main>
     </div>
 
@@ -243,150 +136,38 @@
       <div class="modal__backdrop"></div>
       <div class="modal__content">
         <div class="modal__header">
-          <svg class="modal__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
-            <line x1="12" y1="9" x2="12" y2="13"/>
-            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          <svg
+            class="modal__icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"
+            />
+            <line x1="12" y1="9" x2="12" y2="13" />
+            <line x1="12" y1="17" x2="12.01" y2="17" />
           </svg>
           <h4 class="modal__title">Confirm Action</h4>
         </div>
-        <p class="modal__message">Are you sure you want to perform this action?</p>
+        <p class="modal__message">
+          Are you sure you want to perform this action?
+        </p>
         <div class="modal__actions">
-          <button type="button" class="modal__btn modal__btn--cancel">Cancel</button>
-          <button type="button" class="modal__btn modal__btn--confirm">Confirm</button>
+          <button type="button" class="modal__btn modal__btn--cancel">
+            Cancel
+          </button>
+          <button type="button" class="modal__btn modal__btn--confirm">
+            Confirm
+          </button>
         </div>
       </div>
     </div>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // --- 1. Priority Select Handling ---
-        const prioritySelect = document.getElementById("task-priority");
-        const visualLabel = document.querySelector(".task-form__priority-label");
-        const visualDot = document.querySelector(".task-form__priority-dot");
-
-        prioritySelect.addEventListener("change", (e) => {
-          const val = e.target.value;
-          const label = e.target.options[e.target.selectedIndex].text;
-
-          // Update visual label and dot modifier
-          visualLabel.textContent = label;
-          visualDot.className = "task-form__priority-dot";
-          visualDot.classList.add(`task-form__priority-dot--${val}`);
-        });
-
-        // --- 2. Toast Notification Helper ---
-        function showToast(message, type = "success") {
-          const container = document.querySelector(".toast-container");
-          const toast = document.createElement("div");
-          toast.className = `toast toast--${type}`;
-          toast.textContent = message;
-          container.appendChild(toast);
-          
-          // Trigger reflow to animate
-          setTimeout(() => toast.classList.add("toast--show"), 10);
-          
-          // Remove toast after 3 seconds
-          setTimeout(() => {
-            toast.classList.remove("toast--show");
-            setTimeout(() => toast.remove(), 300);
-          }, 3000);
-        }
-
-        // --- 3. Form Submission Demo ---
-        const form = document.querySelector(".task-form");
-        form.addEventListener("submit", (e) => {
-          e.preventDefault();
-          showToast("Task added successfully!", "success");
-          form.reset();
-          
-          // Reset priority visual indicators
-          document.querySelector(".task-form__priority-label").textContent = "Low";
-          const visualDot = document.querySelector(".task-form__priority-dot");
-          visualDot.className = "task-form__priority-dot task-form__priority-dot--low";
-        });
-
-        // --- 4. Checkbox Toggle Demo ---
-        document.querySelectorAll(".task-item__checkbox").forEach(checkbox => {
-          checkbox.addEventListener("change", (e) => {
-            const item = checkbox.closest(".task-item");
-            if (checkbox.checked) {
-              item.classList.add("task-item--done");
-              showToast("Task marked as completed!", "success");
-            } else {
-              item.classList.remove("task-item--done");
-              showToast("Task marked as active!", "info");
-            }
-          });
-        });
-
-        // --- 5. Custom Confirmation Modal & Deletions ---
-        const modal = document.getElementById("confirm-modal");
-        const modalMessage = modal.querySelector(".modal__message");
-        const confirmBtn = modal.querySelector(".modal__btn--confirm");
-        const cancelBtn = modal.querySelector(".modal__btn--cancel");
-        const backdrop = modal.querySelector(".modal__backdrop");
-
-        let currentAction = null;
-
-        function openModal(message, action) {
-          modalMessage.textContent = message;
-          currentAction = action;
-          modal.removeAttribute("hidden");
-        }
-
-        function closeModal() {
-          modal.setAttribute("hidden", "");
-          currentAction = null;
-        }
-
-        cancelBtn.addEventListener("click", closeModal);
-        backdrop.addEventListener("click", closeModal);
-
-        confirmBtn.addEventListener("click", () => {
-          if (currentAction) {
-            currentAction();
-          }
-          closeModal();
-        });
-
-        // Bind Single Delete Buttons
-        document.querySelectorAll(".task-item__delete").forEach(deleteBtn => {
-          deleteBtn.addEventListener("click", (e) => {
-            const item = deleteBtn.closest(".task-item");
-            openModal("Are you sure you want to delete this task?", () => {
-              item.style.opacity = "0";
-              item.style.transform = "translateY(10px)";
-              setTimeout(() => {
-                item.remove();
-                showToast("Task deleted successfully!", "danger");
-              }, 300);
-            });
-          });
-        });
-
-        // Bind Delete All Button
-        const deleteAllBtn = document.querySelector(".task-list__header-delete");
-        if (deleteAllBtn) {
-          deleteAllBtn.addEventListener("click", () => {
-            const items = document.querySelectorAll(".task-item");
-            if (items.length === 0) {
-              showToast("No tasks available to delete.", "info");
-              return;
-            }
-            openModal("Are you sure you want to delete all tasks?", () => {
-              items.forEach(item => {
-                item.style.opacity = "0";
-                item.style.transform = "translateY(10px)";
-              });
-              setTimeout(() => {
-                items.forEach(item => item.remove());
-                showToast("All tasks deleted!", "danger");
-              }, 300);
-            });
-          });
-        }
-      });
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>

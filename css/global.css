@@ -2,13 +2,17 @@
 
 :root {
   --color-primary: #3aa76d;
+  --color-danger: #ef4444;
+  --color-danger-subtle: #fee2e2;
   /* Neutral */
   --bg-page: #f5f6f8;
   --bg-surface: #ffffff;
   --bg-surface-alt: #f9fafb;
   --bg-viewport: #edeef0;
+  --bg-hover-highlight: #f2fdf6;
   --border-default: #e5e7eb;
   --border-strong: #d1d5db;
+  --border-stronger: #9ca3af;
 
   /* Text */
   --text-primary: #111827;
@@ -27,36 +31,39 @@
   --accent-primary-subtle: #dcfce7;
 
   /* Priority */
-  --priority-high: #dc2626;
+  --priority-high: #ef4444;
+  --priority-high-subtle: #fef2f2;
   --priority-medium: #f59e0b;
-  --priority-low: #16a34a;
+  --priority-medium-subtle: #fffbeb;
+  --priority-low: #10b981;
+  --priority-low-subtle: #f0fdf4;
 
   /* Status */
-  --status-overdue: #ea580c;
+  --status-overdue: #f97316;
   --status-overdue-bg: #fff7ed;
-  --status-done: #16a34a;
+  --status-done: #10b981;
 
-  /* Spacing */
-  --space-xs: 4px;
-  --space-sm: 8px;
-  --space-md: 12px;
-  --space-lg: 16px;
-  --space-xl: 20px;
-  --space-2xl: 24px;
-  --space-3xl: 32px;
+  /* Spacing (Fluid & Relative) */
+  --space-xs: 0.25rem; /* 4px */
+  --space-sm: 0.5rem; /* 8px */
+  --space-md: 0.75rem; /* 12px */
+  --space-lg: 1rem; /* 16px */
+  --space-xl: 1.25rem; /* 20px */
+  --space-2xl: 1.5rem; /* 24px */
+  --space-3xl: 2rem; /* 32px */
 
-  /* Radius */
-  --radius-card: 16px;
-  --radius-chip: 999px;
-  --radius-input: 12px;
-  --radius-checkbox: 6px;
+  /* Radius (Relative) */
+  --radius-card: 1rem; /* 16px */
+  --radius-chip: 99.9rem; /* Pill */
+  --radius-input: 0.75rem; /* 12px */
+  --radius-checkbox: 0.375rem; /* 6px */
 
   /* Shadow / Elevation */
   --shadow-none: none;
-  --shadow-xs: 0 1px 2px rgba(17, 24, 39, 0.04);
-  --shadow-sm: 0 2px 8px rgba(17, 24, 39, 0.06);
-  --shadow-md: 0 8px 24px rgba(17, 24, 39, 0.1);
-  --shadow-lg: 0 16px 40px rgba(17, 24, 39, 0.14);
+  --shadow-xs: 0 0.0625rem 0.125rem rgba(17, 24, 39, 0.04);
+  --shadow-sm: 0 0.125rem 0.5rem rgba(17, 24, 39, 0.06);
+  --shadow-md: 0 0.5rem 1.5rem rgba(17, 24, 39, 0.1);
+  --shadow-lg: 0 1rem 2.5rem rgba(17, 24, 39, 0.14);
 }
 
 *,
